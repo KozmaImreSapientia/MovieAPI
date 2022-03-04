@@ -48,7 +48,7 @@ namespace MovieAPI.Controllers
 
             var movieLogs = _movieLogService.GetByIdAsync(id);
             if(movieLogs == null) return BadRequest("There are no movies!");
-            return Ok();
+            return Ok(movieLogs);
         }
 
         /// <summary>
